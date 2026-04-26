@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Một bức thư nhỏ ✨</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="grain"></div>
+
+  <main class="wrap">
+    <section class="card" aria-live="polite">
+      <header class="top">
+        <div class="badge">💌 Secret Letter</div>
+        <div class="mini">Mở bằng một cú chạm</div>
+      </header>
+
+      <h1 class="title">Gửi <span id="toName">bạn</span> ✨</h1>
+
+      <div class="letter">
+        <p id="typed"></p>
+        <p class="cursor" aria-hidden="true">▍</p>
+      </div>
+
+      <div class="controls">
+        <button id="openBtn" class="btn primary">Mở thư & bật nhạc</button>
+        <button id="toggleMusic" class="btn" disabled>⏸️ Tạm dừng</button>
+        <button id="replay" class="btn" disabled>↻ Gõ lại</button>
+      </div>
+
+      <footer class="foot">
+        <span id="songLabel">🎵 Nhạc: music.mp3</span>
+        <span class="sep">•</span>
+        <span id="fromName">— from: bạn</span>
+      </footer>
+    </section>
+  </main>
+
+  <audio id="audio" src="music.mp3" preload="auto" loop></audio>
+
+  <canvas id="fx" width="1" height="1" aria-hidden="true"></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>
